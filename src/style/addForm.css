@@ -1,0 +1,82 @@
+.form-container
+{
+    width: 100%;
+    min-height: 100vh;
+}
+.form-container form 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.flex-form
+{
+    display: flex;
+    width: 90%;
+    height: 70vh;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.sizing
+{
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.sizing input , .sizing button , .sizing textarea
+{
+    outline: none;
+    background: none;
+    margin-top: 5px;
+    resize: vertical;
+    border:2px solid #9D9CB5;
+    border-radius: 4px;
+    font-size: larger;
+}
+input[type=file]
+{
+    display: none;
+}
+.box-shadow
+{
+    box-shadow: 0px 1px 10px #979797;
+}
+.sizing input 
+{
+    height: 40px;
+}
+.sizing label
+{
+    color: #323145;
+    font-size: 2rem;
+}
+.form-container form button
+{
+    width: 150px;
+    height: 40px;
+    font-size: larger;
+    color: #323145;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+    border-radius: 10px;
+    border-bottom: 3px solid #FF0A0E;
+}
+.form-container form svg
+{
+    width: 400px;
+    height: 400px;
+}
+.msgs
+{
+    width: 50%;
+    height: 50px;
+    background-color: #32b5eef6;
+    border-radius: 5px;
+}
+

@@ -1,0 +1,74 @@
+.about-container
+{
+    width: 100%;
+    min-height: calc(87vh - 200px);
+}
+.tech-head
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.max-tech
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+.present
+{
+    width: 90%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.present svg 
+{
+    width: 300px;
+    height: 300px;
+}
+.icon-container
+{
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.about-icon
+{
+    font-size: 3rem;
+    color: #1a1a1a;
+}
+.tech-section
+{
+    width: 90%;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    flex-direction: column;
+}
+.tech-section ul
+{
+    display: flex;
+    justify-content: space-between;
+}
+.tech-section li 
+{
+    list-style: none;
+}
+
+.top-border
+{
+    width: 92%;
+    height: 50px;
+    border-top: 3px solid #4C4C78;
+    border-radius: 10px;
+    margin-top: 10px;
+}
