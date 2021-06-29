@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const corse = require('cors');
 const flash = require('express-flash');
 const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser')
+
 //SET UP MONGOOSE
 mongoose.connect(process.env.REACT_APP_DATABASE_URL , 
     {
