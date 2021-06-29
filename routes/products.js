@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Product = require('../modules/product');
 const Register = require('../modules/register');
+
 //GET PRODUCTS
 router.get('/products/:apikey' , async (req , res) =>
 {
@@ -18,22 +19,31 @@ router.get('/products/:apikey' , async (req , res) =>
 //POST PRODUCTS
 router.post('/admin/products/add/:apikey' , async (req , res) =>
 {
-    if (req.params.apikey == process.env.REACT_APP_API_KEY)
+    try 
     {
-        const newProduct = await new Product({
-            title:req.body.title,
-            qty:req.body.qty,
-            price:req.body.price,
-            desk:req.body.desk,
-            shortDesk:req.body.shortDesk,
-            cover:req.body.cover,
-            slideImages:req.body.slideImages
-        })
-        await newProduct.save();
-    }
-    else
+        if (req.params.apikey === process.env.REACT_APP_API_KEY)
+        {
+            var {title , qty , price , desk , shortDesk , cover} = req.body;
+
+            if ((/^[A-Za-z]+$/).test(price)) return res.send({msg:'Price Must Be Number' , done:false});
+            if ((/^[A-Za-z]+$/).test(qty)) return res.send({msg:'Qty Must Be Number' , done:false})
+            if (title || qty < 1 || price < 1 || !desk || !shortDesk || !cover) return res.send({msg:'Please Full All Sections' , done:false})
+            const newProduct = await new Product({
+                title,
+                qty,
+                price,
+                desk,
+                shortDesk,
+                cover
+            })
+            await newProduct.save();
+            res.send({done:true})                
+        }
+    } 
+    catch (err) 
     {
-       return console.log('unable to post')
+        console.log(err)
+        res.send({msg:'Unable to post' , done:false})
     }
 })
 
@@ -42,7 +52,9 @@ router.post('/admin/products/upload/:apikey' , (req , res) =>
 {
     if (req.params.apikey == process.env.REACT_APP_API_KEY)
     {
-        if (req.files.cover != null)
+        if (req.files === null) return res.send({done:false});
+
+        if (req.files != null)
         {
             const cover = req.files.cover;
             cover.mv(`${__dirname}/../app/public/images/${cover.name}`)
