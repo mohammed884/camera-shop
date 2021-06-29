@@ -1,0 +1,148 @@
+.product-container
+{
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    background-color: white;
+}
+.product-max
+{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-flex
+{
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 3px solid #4C4C78;
+    border-radius: 20px;
+}
+.product-flex div 
+{
+    justify-self: center;
+}
+.product-info
+{
+    width: 500px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    
+}
+.product-info textarea
+{
+    resize: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 300px;
+    font-size: large;
+}
+.price-title
+{
+    width: 100%;
+    height: 30px;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    color: #1d2b3a;
+}
+.product-flex img 
+{
+    width: 350px;
+    height: 350px;
+}
+.add-section
+{
+    width: 400px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add-section button
+{
+    outline: none;
+    border: none;
+    background: #1d2b3a;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    width: 160px;
+    height: 50px;
+    color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.add-section button:hover
+{
+    transform: translateY(5px);
+}
+.add-section input 
+{
+    width: 50px;
+    height: 40px;
+    outline: none;
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: larger;
+}
+.add-section 
+.style-select
+{
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.style-select select
+{
+    outline: none;
+    border: none;
+    height: fit-content;
+    width: 60px;
+    height: 30px;
+    box-shadow: 0px 0px 5px #4C4C78;
+}
+.style-select option
+{
+    overflow: scroll;
+    height: 50px;
+    box-shadow: 0px 0px 10px #4C4C78;
+    outline: none;
+    border: none;
+}
+.add-button
+{
+    color: #222f3e;
+    transition: all .3s ease-in;
+}
+.add-button:hover 
+{
+    opacity: 1;
+}
+.image-section p 
+{
+    font-size: 3rem;
+    color: #1d2b3a;
+    border-bottom: 3px solid #222f3e;
+    width: fit-content;
+}
+.product-info label p 
+{
+    font-size: x-large;
+    color: #1d2b3a;
+}
+.flex 
+{
+    display: flex;
+}

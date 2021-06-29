@@ -1,0 +1,43 @@
+.register-container
+{
+    width: 100%;
+    height: 100vh;
+}
+.register-container form 
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.max-register
+{
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.register-wrap
+{
+    width: 70%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.max-register button
+{
+    width: 110px;
+    height: 50px;
+    font-size: larger;
+    color: #323145;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+    border-radius: 10px;
+    border-bottom: 3px solid #FF0A0E;
+}
