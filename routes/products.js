@@ -27,7 +27,7 @@ router.post('/admin/products/add/:apikey' , async (req , res) =>
 
             if ((/^[A-Za-z]+$/).test(price)) return res.send({msg:'Price Must Be Number' , done:false});
             if ((/^[A-Za-z]+$/).test(qty)) return res.send({msg:'Qty Must Be Number' , done:false})
-            if (title || qty < 1 || price < 1 || !desk || !shortDesk || !cover) return res.send({msg:'Please Full All Sections' , done:false})
+            if (!title || qty < 1 || price < 1 || !desk || !shortDesk || !cover) return res.send({msg:'Please Full All Sections' , done:false})
             const newProduct = await new Product({
                 title,
                 qty,
